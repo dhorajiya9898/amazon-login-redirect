@@ -13,9 +13,8 @@
         if (authCode) {
             console.log("Authorization Code:", authCode);
 
-            // Optionally, send the code back to your app
-            // For example, using a custom URI scheme:
-            window.location.href = `https://github.com/dhorajiya9898/amazon-login-redirect/blob/main/index.html=${authCode}`;
+            // Redirect back to your app with the authorization code
+            window.location.href = `https://raw.githubusercontent.com/dhorajiya9898/amazon-login-redirect/refs/heads/main/index.html?code=${authCode}`;
         } else if (error) {
             console.error("Error:", error);
         } else {

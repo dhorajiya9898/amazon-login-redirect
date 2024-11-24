@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Login Redirect</title>
+</head>
+<body>
+    <script>
+        // Extract the query parameters (e.g., authorization code or error)
+        const urlParams = new URLSearchParams(window.location.search);
+        const authCode = urlParams.get('code');
+        const error = urlParams.get('error');
+
+        if (authCode) {
+            console.log("Authorization Code:", authCode);
+
+            // Optionally, send the code back to your app
+            // For example, using a custom URI scheme:
+            window.location.href = `myapp://auth?code=${authCode}`;
+        } else if (error) {
+            console.error("Error:", error);
+        } else {
+            console.log("No code or error received.");
+        }
+    </script>
+    <h1>Processing your Amazon login...</h1>
+</body>
+</html>

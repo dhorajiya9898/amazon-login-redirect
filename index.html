@@ -13,9 +13,9 @@
         if (authCode) {
             console.log("Authorization Code:", authCode);
 
-            // Redirect back to your app using a custom URI scheme
-            // Ensure to use the correct URI scheme defined in your app
-            window.location.href = `myapp://auth?code=${authCode}`;
+            // Optionally, send the code back to your app
+            // For example, using a custom URI scheme:
+            window.location.href = `https://github.com/dhorajiya9898/amazon-login-redirect/blob/main/index.html=${authCode}`;
         } else if (error) {
             console.error("Error:", error);
         } else {

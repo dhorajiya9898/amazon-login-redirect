@@ -14,7 +14,7 @@
             console.log("Authorization Code:", authCode);
 
             // Redirect back to your app using a custom URI scheme
-            // Make sure to use the correct URI scheme defined in your app
+            // Ensure to use the correct URI scheme defined in your app
             window.location.href = `myapp://auth?code=${authCode}`;
         } else if (error) {
             console.error("Error:", error);
